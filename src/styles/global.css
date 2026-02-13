@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  background-color: var(--color-bg-page);
+  color: var(--color-text);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+main {
+  background-color: var(--color-bg-card);
+  padding: calc(var(--spacing) * 2);
+  border-radius: var(--radius-lg);
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+input {
+  width: 100%;
+  padding: var(--spacing);
+  height: calc(2 * var(--spacing) + 1em); 
+  border-radius: var(--radius-sm);
+  border: 1px solid #929292;       
+  background-color: #e2e0e0;    
+  color: #000000;               
+
+  transition: border var(--transition-speed) var(--transition-ease);
+  box-sizing: border-box; 
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--color-gradient-start);
+}
+
+
+
+button {
+  width: 100%;
+  padding: var(--spacing);
+  border-radius: var(--radius-sm);
+  border: none;
+  font-weight: bold;
+  color: var(--color-text);
+
+  background-image: linear-gradient(
+    to right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+
+  cursor: pointer;
+
+  transition: 
+    transform var(--transition-speed) var(--transition-ease),
+    opacity var(--transition-speed) var(--transition-ease);
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
